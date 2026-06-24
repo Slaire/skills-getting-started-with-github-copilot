@@ -41,12 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-          <div class="participants">
-            <strong>Participants:</strong>
-            <ul class="participants-list">
-              ${participantsHtml}
-            </ul>
-          </div>
+          <details class="participants-details">
+            <summary class="participants-summary">Participants (${details.participants.length})</summary>
+            <div class="participants">
+              <ul class="participants-list">
+                ${participantsHtml}
+              </ul>
+            </div>
+          </details>
         `;
 
         activitiesList.appendChild(activityCard);
